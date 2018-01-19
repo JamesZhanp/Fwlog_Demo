@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.jamesZhan.entity.EventEntity" table="event" schema="firewalllog">
+        <id name="id">
+            <column name="id" sql-type="bigint(20)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="startTime">
+            <column name="startTime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="lastTime">
+            <column name="lastTime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="isFinished">
+            <column name="isFinished" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="statisticsValue">
+            <column name="statisticsValue" sql-type="varchar(20)" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/firewalllog</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+         <property name="hbm2ddl.auto">update</property>
+        <mapping resource="com/jamesZhan/entity/DestipanalysisEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/DestportanalysisEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/EventEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/FwloganalysisEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/OriginaldestipEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/OriginaldestportEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/OriginalsrcipEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/OriginalsrcportEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/RawfwlogEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/SrcipanalysisEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/SrcportanalysisEntity.hbm.xml"/>
+        <mapping resource="com/jamesZhan/entity/SensitiveportEntity.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

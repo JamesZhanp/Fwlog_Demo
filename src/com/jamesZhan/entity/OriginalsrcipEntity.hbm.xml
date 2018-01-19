@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.jamesZhan.entity.OriginalsrcipEntity" table="originalsrcip" schema="firewalllog">
+        <id name="originalSrcIpId">
+            <column name="originalSrcIp_id" sql-type="int(10)"/>
+            <generator class="increment"/>
+        </id>
+        <property name="startTime">
+            <column name="startTime" sql-type="datetime"/>
+        </property>
+        <property name="endTime">
+            <column name="endTime" sql-type="datetime"/>
+        </property>
+        <property name="statisticsValue">
+            <column name="statisticsValue" sql-type="varchar(15)" length="15"/>
+        </property>
+        <property name="count">
+            <column name="count" sql-type="int(7)"/>
+        </property>
+    </class>
+</hibernate-mapping>
